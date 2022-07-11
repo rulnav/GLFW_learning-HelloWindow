@@ -40,12 +40,16 @@ int main(void)
     /*adjusting viewpoint, and resizing it with window*/
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-    /* Loop until the user closes the window */
+    /* Loop until the user closes the window. Each loop represents one frame.*/
     while (!glfwWindowShouldClose(window))
     {        
+        /*check if escape buton has been pressed, and close window if so*/
+        void processInput(GLFWwindow *window);
+ 
         /* Render here */
-        glClear(GL_COLOR_BUFFER_BIT);
-        
+        glClearColor(0.2f, 0.3f, 0.3f, 1.0f); // sets the clear colour
+        glClear(GL_COLOR_BUFFER_BIT); // clears the colour of the previous frame
+         
         /* Swap front and back buffers */
         glfwSwapBuffers(window);
 
@@ -63,4 +67,13 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
     // make sure the viewport matches the new window dimensions; note that width and 
     // height will be significantly larger than specified on retina displays.
     glViewport(0, 0, width, height);
+}
+
+//function checks if the escape button is pressed and closes window if so.
+void processInput(GLFWwindow *window)
+{
+    if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS){
+        std::cout<<"You pressed ESCAPE"<<std::endl;
+        glfwSetWindowShouldClose(window, true);
+    }    
 }
