@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/dean/gitprojects/personal/opengl_projects/GLFW/HelloWindow/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/HelloWindow.dir/main.cpp.o -c /home/dean/gitprojects/personal/opengl_projects/GLFW/HelloWindow/main.cpp",
+  "file": "/home/dean/gitprojects/personal/opengl_projects/GLFW/HelloWindow/main.cpp"
+}
+]

@@ -1,0 +1,3 @@
+/home/dean/gitprojects/personal/opengl_projects/GLFW/HelloWindow/build/CMakeFiles/HelloWindow.dir
+/home/dean/gitprojects/personal/opengl_projects/GLFW/HelloWindow/build/CMakeFiles/edit_cache.dir
+/home/dean/gitprojects/personal/opengl_projects/GLFW/HelloWindow/build/CMakeFiles/rebuild_cache.dir
