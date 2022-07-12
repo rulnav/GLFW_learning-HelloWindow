@@ -5,6 +5,8 @@
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 
+void processInput(GLFWwindow *window);
+
 int main(void)
 {
     GLFWwindow* window;
@@ -27,6 +29,8 @@ int main(void)
         return -1;
     }
 
+    // glfwSetKeyCallback(window, key_callback);
+
     /* Make the window's context current */
     glfwMakeContextCurrent(window);
 
@@ -44,7 +48,7 @@ int main(void)
     while (!glfwWindowShouldClose(window))
     {        
         /*check if escape buton has been pressed, and close window if so*/
-        void processInput(GLFWwindow *window);
+        processInput(window);
  
         /* Render here */
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f); // sets the clear colour
@@ -74,6 +78,14 @@ void processInput(GLFWwindow *window)
 {
     if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS){
         std::cout<<"You pressed ESCAPE"<<std::endl;
-        glfwSetWindowShouldClose(window, true);
+        glfwSetWindowShouldClose(window, GLFW_TRUE);
     }    
 }
+
+// static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
+// {
+//     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS){
+//         std::cout<<"You pressed ESCAPE"<<std::endl;
+//         glfwSetWindowShouldClose(window, GLFW_TRUE);
+//     }
+// }
